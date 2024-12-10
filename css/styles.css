@@ -1,0 +1,176 @@
+/* Configuración general */
+html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+    background: linear-gradient(-45deg, #2b2d42, #3a3b5a, #2b2d42);
+    background-size: 200% 200%;
+    animation: gradientAnimation 12s ease infinite;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #1f1f1f; /* Tono oscuro uniforme */
+    color: #e4e4e4; /* Texto en gris claro */
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Animación de fondo */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Navbar */
+.navbar {
+    background-color: #2b2d42; /* Azul grisáceo oscuro */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #e4e4e4 !important;
+    text-shadow: 0 0 5px #50597b, 0 0 10px #3b3f67;
+    letter-spacing: 1px;
+}
+
+.navbar-brand i {
+    font-size: 1.5rem;
+    color: #6272a4; /* Azul tenue */
+    margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #e4e4e4 !important;
+    margin: 0 10px;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #8a9dbb !important; /* Azul más claro */
+    text-shadow: 0 0 10px #6c7fa6, 0 0 15px #50597b;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #2b2d42, #3a3b5a);
+    color: #e4e4e4;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px #6c7fa6, 0 0 20px #50597b;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #d0d0d0;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    background-color: #6272a4; /* Azul tenue */
+    color: #e4e4e4;
+    border: none;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(98, 114, 164, 0.6);
+}
+
+.hero .btn:hover {
+    background-color: #50597b; /* Azul más oscuro */
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(98, 114, 164, 0.8);
+}
+
+/* Servicios */
+.card {
+    background-color: #2b2d42;
+    border: none;
+    color: #e4e4e4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 20px #6c7fa6, 0 0 40px #50597b;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    color: #8a9dbb;
+}
+
+.card-text {
+    color: #d0d0d0;
+}
+
+/* Botones */
+.btn-accent {
+    background-color: #6272a4;
+    color: #e4e4e4;
+    border-radius: 50px;
+    padding: 10px 25px;
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-accent:hover {
+    background-color: #50597b;
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px #6c7fa6, 0 0 40px #50597b;
+}
+
+/* Footer */
+footer {
+    background-color: #2b2d42;
+    color: #e4e4e4;
+    text-align: center;
+    padding: 20px;
+    border-top: 3px solid #6272a4;
+    box-shadow: 0 0 15px rgba(98, 114, 164, 0.3), 0 0 40px rgba(80, 89, 123, 0.2);
+}
+
+footer a {
+    color: #e4e4e4;
+    text-decoration: none;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+footer a:hover {
+    color: #8a9dbb;
+    text-shadow: 0 0 10px #6c7fa6, 0 0 20px #50597b;
+}
+
+/* Otros elementos */
+.dashboard {
+    background-color: #354d67;
+    border: 2px solid #6272a4;
+    color: #e4e4e4;
+    padding: 2rem;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px #6c7fa6, 0 0 40px #50597b;
+}

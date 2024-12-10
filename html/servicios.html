@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - Servicios de Ciberseguridad</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-lock"></i> RiskHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="Landing.html">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="Blog.html">Novedades</a></li>
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-light position-relative" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                            <i class="bi bi-cart3"></i>
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                <span id="cartCount">0</span>
+                            </span> 
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Nuestros Servicios</h1>
+            <p class="lead">Explora nuestras soluciones de ciberseguridad y elige los servicios ideales para proteger tu negocio.</p>
+        </div>
+    </header>
+
+    <!-- Servicios -->
+    <section id="servicios" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Servicios Disponibles</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Auditorías ISO</h5>
+                            <p class="card-text">Cumple con normas internacionales como ISO 27001 y 22301.</p>
+                            <button class="btn btn-primary" data-product="Auditorías ISO" data-price="1200">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Gestión de Procesos</h5>
+                            <p class="card-text">Optimiza la eficiencia operativa y reduce riesgos en tu organización.</p>
+                            <button class="btn btn-primary" data-product="Gestión de Procesos" data-price="1500">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Continuidad de Negocio</h5>
+                            <p class="card-text">Diseña estrategias sólidas para garantizar la continuidad en situaciones críticas.</p>
+                            <button class="btn btn-primary" data-product="Continuidad de Negocio" data-price="2000">Agregar al carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito de Compras -->
+    <div class="offcanvas offcanvas-end bg-dark text-light" data-bs-backdrop="static" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <table id="cartTable" class="table table-bordered text-light">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio (USD)</th>
+                        <th>Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body"></tbody>
+            </table>
+            <p>Total: <span id="total">0</span> USD</p>
+            <button id="clearCart" class="btn btn-danger">Vaciar Carrito</button>
+            <button id="checkout" class="btn btn-success mt-3">Concretar Compra</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-white text-center py-4">
+        <div class="container">
+            <p>&copy; 2024 RiskHub. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+</body>
+</html>
